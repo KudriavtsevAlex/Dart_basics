@@ -3,6 +3,7 @@ import 'package:dart_basics/delimeters_calculator.dart';
 import 'package:dart_basics/collection_of_num.dart';
 import 'package:dart_basics/collection_of_words.dart';
 import 'package:dart_basics/collection_of_digit.dart';
+import 'package:dart_basics/point.dart';
 
 void main() {
   print('Наибольший общий делить: ${DelCalc(30, 18).gcd()}');
@@ -17,4 +18,9 @@ void main() {
       .mapOfWords();
   CollectionOfDigit('two, two, one, three, dog, three, four, dog, cat')
       .setOfDigit();
+
+  Point(1, 1, 10).pointTo(1, 1, 1);
+  Point(0, 0, 0).triangleAre(1, 1, 1, 2, 2, 2);
+  Point.zero();
+  Point.line();
 }
