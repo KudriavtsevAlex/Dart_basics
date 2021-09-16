@@ -23,4 +23,30 @@ void main() {
   Point(0, 0, 0).triangleAre(1, 1, 1, 2, 2, 2);
   Point.zero();
   Point.line();
+  15.sqrtN(6);
+}
+
+extension SqrtN on num {
+  num sqrtN(n) {
+    num xk = 2;
+    num xk1 = 4;
+    int step = 0;
+
+    while ((xk - xk1) * (xk - xk1) > 0.000001) {
+      xk = xk1;
+      xk1 = ((n - 1) * xk + this / xkMinus1(xk, n)) / n;
+    }
+    print('Корень $n степени из $this = ${(xk * 100000).toInt() / 100000}');
+    return (xk * 100000).toInt() / 100000;
+  }
+
+  num xkMinus1(num xk, num n) {
+    num x = xk;
+    while (n != 2) {
+      x *= xk;
+      n -= 1;
+    }
+
+    return x;
+  }
 }
