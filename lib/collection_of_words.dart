@@ -5,7 +5,8 @@ class CollectionOfWords {
 
   CollectionOfWords(this.collection);
 
-  Map<String, int> MapOfWords() {
+
+  Map<String, int> mapOfWords() {
     int countIndex = collection.length;
     Map<String, int> map = {};
     collection.forEach((element) {

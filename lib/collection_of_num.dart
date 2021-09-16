@@ -8,6 +8,7 @@ class CollectionOfNum {
     int integer = 0;
     bool mark = false;
     List list = text.split("");
+
     List<int> intList = [];
 
     for (var element in list) {

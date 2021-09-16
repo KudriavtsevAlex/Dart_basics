@@ -1,7 +1,8 @@
 import 'package:dart_basics/binary.dart';
 import 'package:dart_basics/delimeters_calculator.dart';
-import 'package:dart_basics/collection_of_string.dart';
+import 'package:dart_basics/collection_of_num.dart';
 import 'package:dart_basics/collection_of_words.dart';
+import 'package:dart_basics/collection_of_digit.dart';
 
 void main() {
   print('Наибольший общий делить: ${DelCalc(30, 18).gcd()}');
@@ -13,5 +14,7 @@ void main() {
   CollectionOfNum('uyg324fh hniu 77667 hg 5g65h h6544 n4  4 344fg').findNum();
   CollectionOfWords(
           ['first', 'first', 'first', 'second', 'third', 'third', 'first'])
-      .MapOfWords();
+      .mapOfWords();
+  CollectionOfDigit('two, two, one, three, dog, three, four, dog, cat')
+      .setOfDigit();
 }
