@@ -1,6 +1,8 @@
 class User {
   String email = "";
+
   User(this.email);
+
   void pr() {
     print('user');
   }
@@ -21,7 +23,6 @@ class GeneralUser extends User {
   GeneralUser(String email) : super(email);
 }
 
-
 class UserManager<T extends User> {
   List<T> list = [];
 
@@ -34,12 +35,12 @@ class UserManager<T extends User> {
       if (element.runtimeType != AdminUser) {
         print(element.email);
       } else {
-        element.getMailSystem();
+        print(
+            'НЕ РАБОТАЕТ element.getMailSystem() хотя тип определяется каак AdminUser');
       }
     });
   }
 }
-
 
 void main() {
   User user1 = User('user1@mail.ru');
@@ -50,7 +51,7 @@ void main() {
   usermanager.addUser(user1);
   usermanager.addUser(user2);
   usermanager.addUser(user3);
+  usermanager.printer();
 
   // user3.getMailSystem(); РАБОТАЕТ!!!
-
 }
