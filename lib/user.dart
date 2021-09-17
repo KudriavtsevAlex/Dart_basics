@@ -36,7 +36,7 @@ class UserManager<T extends User> {
         print(element.email);
       } else {
         print(
-            'НЕ РАБОТАЕТ element.getMailSystem() хотя тип определяется каак AdminUser');
+            'НЕ РАБОТАЕТ element.getMailSystem() хотя тип определяется как AdminUser');
       }
     });
   }
