@@ -23,7 +23,7 @@ void main() {
   Point(0, 0, 0).triangleAre(1, 1, 1, 2, 2, 2);
   Point.zero();
   Point.line();
-  15.sqrtN(6);
+  2.sqrtN(32);
 }
 
 extension SqrtN on num {
@@ -31,6 +31,10 @@ extension SqrtN on num {
     num xk = 2;
     num xk1 = 4;
     int step = 0;
+    if (n<=0) throw Exception('Error n < 0 !!!');
+    if (n == 1) throw Exception('Error n = 0 Сам сможешь посчитать!');
+    if (n >= 33) throw Exception('Error n >=33 Очень сложно для меня!');
+
 
     while ((xk - xk1) * (xk - xk1) > 0.000001) {
       xk = xk1;
