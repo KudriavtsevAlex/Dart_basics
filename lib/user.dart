@@ -41,17 +41,3 @@ class UserManager<T extends User> {
     });
   }
 }
-
-void main() {
-  User user1 = User('user1@mail.ru');
-
-  AdminUser user3 = AdminUser('alekukutudasuda@mail.ru');
-  GeneralUser user2 = GeneralUser('user2@mail.ru');
-  UserManager usermanager = UserManager<User>();
-  usermanager.addUser(user1);
-  usermanager.addUser(user2);
-  usermanager.addUser(user3);
-  usermanager.printer();
-
-  // user3.getMailSystem(); РАБОТАЕТ!!!
-}
