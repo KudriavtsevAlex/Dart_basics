@@ -31,12 +31,11 @@ class UserManager<T extends User> {
   }
 
   void printer() {
-    list.forEach((element) {
+    list.forEach((User element) {
       if (element.runtimeType != AdminUser) {
         print(element.email);
       } else {
-        print(
-            'НЕ РАБОТАЕТ element.getMailSystem() хотя тип определяется как AdminUser');
+        (element as AdminUser).getMailSystem();
       }
     });
   }
